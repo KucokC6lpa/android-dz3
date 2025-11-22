@@ -30,7 +30,8 @@ class ActivityA : AppCompatActivity() {
             val colorToB = etColor.text.toString()
             val intentCallB = Intent(this, ActivityB::class.java)
             intentCallB.putExtra(toBkey, colorToB)
-            intentCallB.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            intentCallB.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
             startActivity(intentCallB)
         }
 

@@ -12,7 +12,7 @@ class ActivityC : AppCompatActivity() {
 
         val buttonCallA = findViewById<Button>(R.id.buttonC)
         buttonCallA.setOnClickListener{
-            val intentCallA = Intent(this, ActivityA::class.java).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            val intentCallA = Intent(this, ActivityA::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intentCallA)
         }
     }
